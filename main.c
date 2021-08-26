@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		mvaddch(apple->y, apple->x, '@');
 
 		int ticks = (clock() - initial_time);
-		float seconds = ticks / CLOCKS_PER_SEC;
+		int seconds = ticks / CLOCKS_PER_SEC;
 		int nanosecs = 1000000000 * seconds;
 		const struct timespec frame[] = {
 			{0, (1000000000/FRAMERATE) - nanosecs}
